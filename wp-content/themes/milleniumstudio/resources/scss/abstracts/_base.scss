@@ -1,13 +1,33 @@
 html {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 body {
-	overflow-x: hidden;
+  overflow: hidden;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 * {
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  section {
+    width: 100%;
+  }
+}
+
+.container {
+	@media screen and (min-width: 1190px) {
+		max-width: 1160px;
+	}
+}

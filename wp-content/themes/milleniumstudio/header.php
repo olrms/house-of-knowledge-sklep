@@ -13,52 +13,42 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
   <!-- Google -->
-  <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
+  <meta name="description" content="<?= get_bloginfo('description'); ?>">
   <!-- Facebook -->
-  <meta property="og:title" content="<?php echo get_bloginfo('name'); ?>">
-  <meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
-  <meta property="og:url" content="<?php echo get_home_url(); ?>">
-  <meta property="og:description" content="<?php echo get_bloginfo('description'); ?>">
+  <meta property="og:title" content="<?= get_bloginfo('name'); ?>">
+  <meta property="og:site_name" content="<?= get_bloginfo('name'); ?>">
+  <meta property="og:url" content="<?= get_home_url(); ?>">
+  <meta property="og:description" content="<?= get_bloginfo('description'); ?>">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/test.jpg">
+  <meta property="og:image" content="<?= get_template_directory_uri(); ?>/assets/img/test.jpg">
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="<?php echo get_home_url(); ?>">
-  <meta property="twitter:title" content="<?php echo get_bloginfo('name'); ?>">
-  <meta property="twitter:description" content="<?php echo get_bloginfo('description'); ?>">
-  <meta property="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/test.jpg">
+  <meta property="twitter:url" content="<?= get_home_url(); ?>">
+  <meta property="twitter:title" content="<?= get_bloginfo('name'); ?>">
+  <meta property="twitter:description" content="<?= get_bloginfo('description'); ?>">
+  <meta property="twitter:image" content="<?= get_template_directory_uri(); ?>/assets/img/test.jpg">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <?php
-  if (have_rows('header', 'options')) {
-    while (have_rows('header', 'options')) {
-      the_row();
-      $logo = esc_url(get_sub_field('logo', 'options'));
-    }
-  }
-  ?>
-  <header class="header" style="display: none">
+  <header class="header" style="opacity: 0; height:116px; overflow:hidden">
     <div class="header__box">
-      <div class="container justify-content-between">
+      <div class="container">
         <div class="header__content">
-          <img class="header__logo" src="<?php echo $logo; ?>" alt="<?php echo get_bloginfo('name'); ?> - logo">
+          <img class="header__logo" src="" alt="<?= get_bloginfo('name'); ?> - logo">
           <div id="hamburger" class="hamburger">
             <span class="hamburger__bar"></span>
             <span class="hamburger__bar"></span>
             <span class="hamburger__bar"></span>
           </div>
           <nav id="menu" class="menu menu--primary">
-            <?php
-            wp_nav_menu(array(
+            <?php wp_nav_menu(array(
               'theme_location'    => 'main',
               'container'         => '',
               'menu_class'        => 'menu__items menu__items--primary',
-            ));
-            ?>
+            )); ?>
           </nav>
         </div>
       </div>

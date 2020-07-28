@@ -2,3 +2,4 @@ license.txt
 readme.html
 .htaccess
 wp-config.php
+node_modules/

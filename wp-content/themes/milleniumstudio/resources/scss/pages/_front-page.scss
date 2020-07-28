@@ -1,0 +1,40 @@
+#front-page {
+  .hero {
+    position: relative;
+    min-height: 670px;
+    &__bg {
+      margin: 0px;
+      padding: 0px;
+      @extend %absolute-cover-el;
+      img {
+        display: block;
+        @extend %absolute-cover-bg-object;
+      }
+    }
+    &__content {
+      display: flex;
+      position: relative;
+      z-index: 1;
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 204px 0px;
+      h1,
+      h2 {
+        color: #fff;
+        font-size: 56px;
+        font-weight: 500;
+        margin: 0px;
+        line-height: 56px;
+        letter-spacing: 3px;
+        padding: 26px 40px 16px;
+      }
+      h1 {
+        background: transparentize($color: $blue, $amount: 0.2);
+        margin-bottom: 30px;
+      }
+      h2 {
+        background: transparentize($color: $orange, $amount: 0.2);
+      }
+    }
+  }
+}

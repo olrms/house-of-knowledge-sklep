@@ -4,10 +4,24 @@ $header-color: black;
 
 $hamburger-color: black;
 
-$blue:#103674;
-$orange:#f55a24;
+$blue: #03337f;
+$orange: #f75c23;
 
 $xl: 1200px;
 $lg: 992px;
 $md: 768px;
 $sm: 576px;
+
+%absolute-cover-el {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+%absolute-cover-bg-object {
+  @extend %absolute-cover-el;
+  object-fit: cover;
+  object-position: center;
+}
