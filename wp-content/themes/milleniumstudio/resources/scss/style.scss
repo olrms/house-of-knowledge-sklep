@@ -1,3 +1,5 @@
+@import "vendors/bootstrap-grid.min.css";
+
 @import "abstracts/variables";
 @import "abstracts/base";
 @import "abstracts/typography";
@@ -11,7 +13,7 @@
 @import "pages/single";
 @import "pages/page";
 
-@import "vendors/bootstrap-grid.min.css";
+
 // @import "vendors/reset.css";
 // @import "vendors/aos.css";
 // @import "vendors/owl.css";

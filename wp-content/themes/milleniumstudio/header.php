@@ -1,12 +1,14 @@
 <?php
+
 /**
-* @package Millenium_Studio_Theme
-*/
+ * @package Millenium_Studio_Theme
+ */
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
@@ -29,36 +31,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
-<?php 
-  if ( have_rows( 'header', 'options' ) ) {
-    while ( have_rows( 'header', 'options' ) ) {
+  <?php
+  if (have_rows('header', 'options')) {
+    while (have_rows('header', 'options')) {
       the_row();
-      $logo = esc_url( get_sub_field( 'logo', 'options' ) );
+      $logo = esc_url(get_sub_field('logo', 'options'));
     }
   }
-?>
-<h1>test</h1>
-<header class="header">
-  <div class="header__box">
-    <div class="container justify-content-between">
-      <div class="header__content">
-        <img class="header__logo" src="<?php echo $logo; ?>" alt="<?php echo get_bloginfo('name'); ?> - logo">
-        <div id="hamburger" class="hamburger">
-          <span class="hamburger__bar"></span>
-          <span class="hamburger__bar"></span>
-          <span class="hamburger__bar"></span>
-        </div>
-        <nav id="menu" class="menu menu--primary">
-          <?php
-            wp_nav_menu( array(
+  ?>
+  <header class="header" style="display: none">
+    <div class="header__box">
+      <div class="container justify-content-between">
+        <div class="header__content">
+          <img class="header__logo" src="<?php echo $logo; ?>" alt="<?php echo get_bloginfo('name'); ?> - logo">
+          <div id="hamburger" class="hamburger">
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
+            <span class="hamburger__bar"></span>
+          </div>
+          <nav id="menu" class="menu menu--primary">
+            <?php
+            wp_nav_menu(array(
               'theme_location'    => 'main',
               'container'         => '',
               'menu_class'        => 'menu__items menu__items--primary',
-            ) );
-          ?>
-        </nav>
+            ));
+            ?>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
