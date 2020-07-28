@@ -1,0 +1,9 @@
+.page-not-found {
+  text-align: center;
+  &__name {
+    color: green;
+  }
+  &__content {
+    color: red;
+  }
+}

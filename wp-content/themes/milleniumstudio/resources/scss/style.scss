@@ -1,0 +1,18 @@
+@import "abstracts/variables";
+@import "abstracts/base";
+@import "abstracts/typography";
+@import "abstracts/mixins";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/front-page";
+@import "pages/articles";
+@import "pages/single";
+@import "pages/page";
+
+@import "vendors/bootstrap-grid.min.css";
+// @import "vendors/reset.css";
+// @import "vendors/aos.css";
+// @import "vendors/owl.css";
+
