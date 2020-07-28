@@ -92,6 +92,23 @@ class MsTheme
     remove_post_type_support('page', 'author');
     remove_post_type_support('page', 'excerpt');
   }
+
+
+  /* static functions for theme templates */
+  public static function getProductsCategories()
+  {
+    $terms = get_terms('product_cat', array(
+      'hide_empty' => false,
+      'exclude' => array(15),
+    ));
+
+    foreach ($terms as $key => &$term) {
+      $term->thumbnail = wp_get_attachment_url(get_term_meta( $term->term_id, 'thumbnail_id', true ));
+      $term->link = get_term_link($term, 'product_cat');
+    }
+
+    return $terms;
+  }
 }
 
 $_MsTheme = new MsTheme();

@@ -12,6 +12,10 @@ $lg: 992px;
 $md: 768px;
 $sm: 576px;
 
+$transition: 0.15s;
+
+$RobotoFont: "Roboto", sans-serif;
+
 %absolute-cover-el {
   position: absolute;
   left: 0px;
@@ -24,4 +28,10 @@ $sm: 576px;
   @extend %absolute-cover-el;
   object-fit: cover;
   object-position: center;
+}
+
+%pseudo-absolute {
+  content: "";
+  position: absolute;
+  display: block;
 }
