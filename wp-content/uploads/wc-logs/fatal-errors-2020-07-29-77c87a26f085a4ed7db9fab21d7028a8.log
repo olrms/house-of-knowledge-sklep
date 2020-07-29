@@ -1,0 +1,230 @@
+2020-07-29T10:35:50+00:00 CRITICAL Uncaught TypeError: Argument 1 passed to HokGetresponse::GenerateGetResponseForm() must be of the type array, string given, called in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/shortcodes.php on line 343 and defined in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:17
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/shortcodes.php(343): HokGetresponse->GenerateGetResponseForm('', '', 'getresponse_for...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(getres...', 'do_shortcode_ta...', '[getresponse_fo...')
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/themes/milleniumstudio/footer.php(5): do_shortcode('[getresponse_fo...')
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/template.php(723): require_once('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/template.php(672): load_tem w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 17
+
+2020-07-29T11:07:10+00:00 CRITICAL Uncaught Error: Access to undeclared static property: MsTheme::$GetResponseForms in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/themes/milleniumstudio/footer.php:5
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/template.php(723): require_once()
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/template.php(672): load_template('/opt/lampp/htdo...', true)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/general-template.php(76): locate_template(Array, true)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/themes/milleniumstudio/front-page.php(46): get_footer()
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/template-loader.php(106): include('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-blog-header.php(19): require_once('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/houseofknowledge-sklep/index.php(17): require('/opt/lampp/htdo...')
+#7 {main}
+  thrown w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/themes/milleniumstudio/footer.php w linii 5
+
+2020-07-29T11:31:38+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7Sent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 2 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:30
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7Sent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/contact-form.php(753): do_action('wpcf7_submit', Object(WPCF7_ContactForm), Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/rest-api.php(298): WPCF7_ContactForm->submit()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-in w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 30
+
+2020-07-29T11:31:56+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7Sent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 2 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:30
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7Sent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/contact-form.php(753): do_action('wpcf7_submit', Object(WPCF7_ContactForm), Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/rest-api.php(298): WPCF7_ContactForm->submit()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-in w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 30
+
+2020-07-29T11:33:55+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7Sent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 2 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:30
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7Sent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/contact-form.php(753): do_action('wpcf7_submit', Object(WPCF7_ContactForm), Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/rest-api.php(298): WPCF7_ContactForm->submit()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-in w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 30
+
+2020-07-29T11:34:04+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7Sent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 2 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:30
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7Sent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/contact-form.php(753): do_action('wpcf7_submit', Object(WPCF7_ContactForm), Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/rest-api.php(298): WPCF7_ContactForm->submit()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-in w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 30
+
+2020-07-29T11:34:48+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7Sent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 2 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:30
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7Sent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/contact-form.php(753): do_action('wpcf7_submit', Object(WPCF7_ContactForm), Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/rest-api.php(298): WPCF7_ContactForm->submit()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-in w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 30
+
+2020-07-29T11:35:18+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7Sent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 2 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7Sent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/contact-form.php(753): do_action('wpcf7_submit', Object(WPCF7_ContactForm), Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/rest-api.php(298): WPCF7_ContactForm->submit()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-in w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:36:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7Sent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 2 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7Sent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/contact-form.php(753): do_action('wpcf7_submit', Object(WPCF7_ContactForm), Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/rest-api.php(298): WPCF7_ContactForm->submit()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-in w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:38:29+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:38:36+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:38:50+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:39:49+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:39:51+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:39:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:39:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:39:52+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:48:18+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:50:26+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function HokGetresponse::hookCf7BeforeSent(), 1 passed in /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php on line 289 and exactly 3 expected in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:31
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(289): HokGetresponse::hookCf7BeforeSent(Object(WPCF7_ContactForm))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sk w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 31
+
+2020-07-29T11:51:10+00:00 CRITICAL Uncaught Error: Call to a member function prop() on null in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:36
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(287): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm), true, Object(WPCF7_Submission))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(24): WPCF7_Submission->proceed()
+#6 /opt/lampp/htdocs/houseofkn w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 36
+
+2020-07-29T11:51:27+00:00 CRITICAL Uncaught Error: Call to a member function prop() on null in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:36
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(287): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm), true, Object(WPCF7_Submission))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(24): WPCF7_Submission->proceed()
+#6 /opt/lampp/htdocs/houseofkn w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 36
+
+2020-07-29T11:58:12+00:00 CRITICAL Uncaught Error: Call to private method HokGetresponseIntegration::NewContact() from context 'HokGetresponse' in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:45
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(287): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm), true, Object(WPCF7_Submission))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(24): WPCF7_ w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 45
+
+2020-07-29T12:10:13+00:00 CRITICAL Uncaught Error: Call to private method HokGetresponseIntegration::NewContact() from context 'HokGetresponse' in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:45
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(287): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm), true, Object(WPCF7_Submission))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(24): WPCF7_ w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 45
+
+2020-07-29T12:16:43+00:00 CRITICAL Uncaught Error: Call to private method HokGetresponseIntegration::NewContact() from context 'HokGetresponse' in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:43
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(287): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm), false, Object(WPCF7_Submission))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(24): WPCF7 w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 43
+
+2020-07-29T12:18:47+00:00 CRITICAL Uncaught Error: Call to private method HokGetresponseIntegration::NewContact() from context 'HokGetresponse' in /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php:45
+Stack trace:
+#0 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(287): HokGetresponse->hookCf7BeforeSent(Object(WPCF7_ContactForm), false, Object(WPCF7_Submission))
+#1 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /opt/lampp/htdocs/houseofknowledge-sklep/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#3 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(464): do_action_ref_array('wpcf7_before_se...', Array)
+#4 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(73): WPCF7_Submission->before_send_mail()
+#5 /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/contact-form-7/includes/submission.php(24): WPCF7 w /opt/lampp/htdocs/houseofknowledge-sklep/wp-content/plugins/hok-getresponse/hok-getresponse.php w linii 45
+

@@ -10,7 +10,57 @@ class HokGetresponse
 {
     function __construct()
     {
+        global $wpdb;
+        $this->db = $wpdb;
         $this->Getresponse = new HokGetresponseIntegration();
+        add_shortcode('getresponse_form', array($this, 'GenerateGetResponseForm'));
+        add_action('wpcf7_before_send_mail', array($this, 'hookCf7BeforeSent'), 10, 3);
+        add_filter('wpcf7_ajax_json_echo', array($this, 'filterCf7OutputContent'), 10, 2);
+    }
+
+    private function isGetResponseForm($cf7id)
+    {
+        $sql = "SELECT post_id FROM wp_postmeta WHERE meta_key='_mail' AND meta_value LIKE '%\"recipient\";s:%:\"GetResponse\"%' AND post_id = " . $cf7id;
+        $FormID = $this->db->get_var($sql);
+        if (is_null($FormID)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public function hookCf7BeforeSent($cf7, &$abort, $object)
+    {
+        if ($this->isGetResponseForm($cf7->id())) {
+            $cf7_submission = WPCF7_Submission::get_instance();
+            if ($cf7_submission) {
+                $posted_data = $cf7_submission->get_posted_data();
+
+                if (!isset($posted_data['email'])) {
+                    $abort = true;
+                    $object->set_response('W formularzu brakuje pola email');
+                    return false;
+                }
+
+                $NewContact = $this->Getresponse->NewContact($posted_data['email']);
+                if ($NewContact === false) {
+                    $abort = true;
+                    $object->set_response('Wystąpił problem z zapisaniem Cię do newslettera');
+                    return false;
+                }
+            } else {
+                $abort = false;
+            }
+        }
+    }
+
+    public function filterCf7OutputContent($response, &$result)
+    {
+        if ($this->isGetResponseForm($result['contact_form_id']) && $response['status'] != 'validation_failed') {
+            $response['status'] = 'mail_sent';
+            $response["message"] = 'Dziękujemy! Poprawnie zapisano Cię do naszego Newlettera!';
+        }
+        return $response;
     }
 }
 
@@ -21,8 +71,6 @@ class HokGetresponseIntegration
         $this->apiKey = 'z9avl0ksfht6m3at9prsb9ze5fdz1xsj';
         $this->curl = null;
         $this->apiEndpoint = 'https://api.getresponse.com/v3';
-
-        //$this->NewContact('p.sulkowski@milleniumstudio.pl', 'Piotr Sułkowski');
     }
 
     private function getClientIP()
@@ -94,7 +142,7 @@ class HokGetresponseIntegration
         }
     }
 
-    private function NewContact($email, $name = null, $tags = null, $customFieldValues = null, $scoring = null)
+    public function NewContact($email, $name = null, $tags = null, $customFieldValues = null, $scoring = null)
     {
         $DefaultCampaign = $this->getDefaultCampaign();
         $CampaignID = $DefaultCampaign['campaignId'];
@@ -120,9 +168,6 @@ class HokGetresponseIntegration
         $PostVars = json_encode($PostVars);
 
         $existingContact = $this->getContactByEmail($email);
-
-
-
         if ($existingContact !== false) {
             $ContactData = $this->curlCall($this->apiEndpoint . '/contacts/' . $existingContact['contactId'], $PostVars);
         } else {
@@ -137,4 +182,4 @@ class HokGetresponseIntegration
     }
 }
 
-
+$_HokGetresponse = new HokGetresponse();
