@@ -49,7 +49,7 @@ main {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  main section {
+  main section, main article {
     width: 100%; }
 
 @media screen and (min-width: 1190px) {
