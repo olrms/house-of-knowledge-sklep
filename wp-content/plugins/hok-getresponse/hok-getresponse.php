@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Integracja z GetResponse 
-Description: Integracja z GetResponse  wykonana dla House of Knowledge
-Author: Piotr Sułkowski| MilleniumStudio 
+Description: Integracja z GetResponse wykonana dla House of Knowledge
+Author: Piotr Sułkowski | MilleniumStudio 
 Version: 1.0
 */
 
@@ -13,9 +13,16 @@ class HokGetresponse
         global $wpdb;
         $this->db = $wpdb;
         $this->Getresponse = new HokGetresponseIntegration();
+
         add_shortcode('getresponse_form', array($this, 'GenerateGetResponseForm'));
         add_action('wpcf7_before_send_mail', array($this, 'hookCf7BeforeSent'), 10, 3);
         add_filter('wpcf7_ajax_json_echo', array($this, 'filterCf7OutputContent'), 10, 2);
+        add_action('rest_api_init', array($this, 'registerCustomRestApiEndpoint'));
+    }
+
+    private function getPluginURL()
+    {
+        return home_url() . '/' . str_replace(ABSPATH, '', __DIR__);
     }
 
     private function isGetResponseForm($cf7id)
@@ -27,6 +34,24 @@ class HokGetresponse
         } else {
             return true;
         }
+    }
+
+    public function registerCustomRestApiEndpoint()
+    {
+        register_rest_route('getresponse', '/add', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'AjaxNewContact'),
+            'args' => array(
+                'email' => array(
+                    'required' => true,
+                    'sanitize_callback' => 'esc_attr'
+                ),
+                'func' => array(
+                    'required' => false,
+                    'sanitize_callback' => 'esc_attr'
+                ),
+            )
+        ));
     }
 
     public function hookCf7BeforeSent($cf7, &$abort, $object)
@@ -54,6 +79,17 @@ class HokGetresponse
         }
     }
 
+    public function AjaxNewContact($data)
+    {
+        // if(!($this->Getresponse->NewContact($data['email']) === false)) {
+            if(isset($data['func']) && function_exists($data['func'])) {
+                return $data['func']();
+            } else {
+                return true;
+            }
+        // }
+    }
+
     public function filterCf7OutputContent($response, &$result)
     {
         if ($this->isGetResponseForm($result['contact_form_id']) && $response['status'] != 'validation_failed') {
@@ -61,6 +97,39 @@ class HokGetresponse
             $response["message"] = 'Dziękujemy! Poprawnie zapisano Cię do naszego Newlettera!';
         }
         return $response;
+    }
+
+    public function getGetResponseFormHTML($name)
+    {
+        $html = file_get_contents(__DIR__ . '/templates/GetResponseForm.php');
+        $html = str_replace('%formname%', $name, $html);
+        return $html;
+    }
+
+    public function GenerateGetResponseForm($args)
+    {
+        if (!isset($args['func'])) {
+            echo 'Missing argument "func"!';
+            return false;
+        }
+        if (!isset($args['name'])) {
+            echo 'Missing argument "name"!';
+            return false;
+        }
+
+        echo $this->getGetResponseFormHTML($args['name']);
+        echo '<script> var ' . $args['name'] . '_callback = "' . $args['func'] . '"; </script>';
+
+        add_action('wp_footer', array($this, 'addGetResponseFormJS'));
+    }
+
+    public function addGetResponseFormJS()
+    {
+        echo '<script> 
+            GetResponseHomeURL = "' . home_url() . '"; 
+            GetResponseAddEndpoint = "/wp-json/getresponse/add"; 
+        </script>';
+        wp_enqueue_script('GetResponseFormJS', $this->getPluginURL() . '/assets/js/GetResponseFormJS.js', array('jquery'), 1, true);
     }
 }
 

@@ -40,6 +40,11 @@
 					<?= get_field('page_content', 8) ?>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-12">
+					<?= do_shortcode('[getresponse_form func="callback" name="formName"]') ?>
+				</div>
+			</div>
 		</div>
 	</section>
 </main>
